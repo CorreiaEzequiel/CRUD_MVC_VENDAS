@@ -7,10 +7,71 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Web_Vendas.styles.css" asp-append-version="true" />
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #000000; /
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: #ffc107 !important;
+            font-weight: bold;
+            font-size: 1.8rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .navbar-brand:hover {
+                transform: scale(1.05);
+            }
+
+        .navbar-nav .nav-link {
+            color: #000000 !important; /* Texto preto para melhor legibilidade */
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #ffc107 !important;
+            }
+
+        .btn-custom {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #ffffff; /* Texto branco para melhor contraste */
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .btn-custom:hover {
+                background-color: #ffca28;
+                border-color: #ffca28;
+                transform: scale(1.1);
+            }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            color: #ffffff; /* Texto branco para melhor contraste */
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <!-- Navbar com estilos personalizados -->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web_Vendas</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,19 +81,20 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+                            <a class="nav-link" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a>
+                            <a class="nav-link" asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -44,6 +106,7 @@
             &copy; 2024 - Web_Vendas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,7 +1,7 @@
 ﻿@model Web_Vendas.Models.Produto
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar";
 }
 
 <h1>Create</h1>
@@ -40,7 +40,9 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();">Voltar para lista</button>
+
+
 </div>
 
     @{
